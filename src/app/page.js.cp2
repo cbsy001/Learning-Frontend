@@ -1,0 +1,34 @@
+
+"use client";
+
+// src/app/page.js
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
+export default function Page() {
+  const [resources, setResources] = useState([]);
+
+  useEffect(() => {
+    async function fetchResources() {
+      try {
+        const response = await axios.get('/api/resources');
+        setResources(response.data);
+      } catch (error) {
+        console.error('Error fetching resources:', error);
+      }
+    }
+
+    fetchResources();
+  }, []);
+
+  return (
+    <div>
+      <h1>Learning Resources</h1>
+      <ul>
+        {resources.map((resource) => (
+          <li key={resource.id}>{resource.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
