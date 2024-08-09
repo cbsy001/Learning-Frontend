@@ -25,7 +25,7 @@ const Books = ({ category }) => {
   return (
     <div className={styles.container}>
       <button onClick={fetchBooks} className={styles.button}>
-        {loading ? 'Loading...' : 'Fetch Books'}
+        {loading ? 'Loading...' : 'Fetch Books CS'}
       </button>
       {error && <p className={styles.error}>{error}</p>}
       {books.length > 0 ? (
