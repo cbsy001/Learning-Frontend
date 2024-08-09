@@ -25,7 +25,7 @@ const Videos = ({ category }) => {
   return (
     <div className={styles.container}>
       <button onClick={fetchVideos} className={styles.button}>
-        {loading ? 'Loading...' : 'Fetch Videos'}
+        {loading ? 'Loading...' : 'F3tch Videos'}
       </button>
       {error && <p className={styles.error}>{error}</p>}
       {videos.length > 0 ? (
