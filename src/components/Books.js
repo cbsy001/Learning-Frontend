@@ -12,7 +12,7 @@ const Books = ({ category }) => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.get(`http://192.168.12.67:5000/api/books/${category}`);
+      const response = await axios.get(`http://192.168.12.81:5000/api/books/${category}`);
       setBooks(response.data);
     } catch (error) {
       console.error('Error fetching books:', error);

@@ -12,7 +12,7 @@ const Videos = ({ category }) => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.get(`http://192.168.12.67:5000/api/videos/${category}`);
+      const response = await axios.get(`http://192.168.12.81:5000/api/videos/${category}`);
       setVideos(response.data);
     } catch (error) {
       console.error('Error fetching videos:', error);
